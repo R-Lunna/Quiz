@@ -6,6 +6,9 @@
 package Views;
 
 import Application.AllQuestion;
+import Application.QuestionNursing;
+import Application.QuestionNutrition;
+import Application.QuestionViruse;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -87,8 +90,8 @@ public class Question extends javax.swing.JFrame {
         
         // Instancia "n" para se tornar um objeto
         // Acessa as questões e alternativas de enfermagem passando "n" como argumento
-        AllQuestion n = new AllQuestion();
-        n.qNursing(n);
+        QuestionNursing n = new QuestionNursing();
+        n.qNursing();
         
         // Array do tipo "AllQuestion" para armazenar toda a lista com as questões de enfermagem
         // n.getQuestionNursing(;) retorna a lista com as informações de enfermagem
@@ -96,8 +99,8 @@ public class Question extends javax.swing.JFrame {
         
         // Instancia "a" para se tornar um objeto
         // Acessa o gabarito de enfermagem passando "a" como argumento
-        AllQuestion a = new AllQuestion();
-        a.answerNursing(a);
+        QuestionNursing a = new QuestionNursing();
+        a.answerNursing();
         
         // Array do tipo "AllQuestion" para armazenar toda a lista com o gabarito de enfermagem
         // a.getAnswerNursing(); retorna a lista com as informações de enfermagem
@@ -309,13 +312,13 @@ public class Question extends javax.swing.JFrame {
     */
     
     private void Nutrition() {
-        AllQuestion n = new AllQuestion();
-        n.qNutrition(n);
+        QuestionNutrition n = new QuestionNutrition();
+        n.qNutrition();
         
         ArrayList<AllQuestion> list = n.getQuestionNutrition();
         
-        AllQuestion a = new AllQuestion();
-        a.answerNutrition(a);
+        QuestionNutrition a = new QuestionNutrition();
+        a.answerNutrition();
         
         ArrayList<AllQuestion> result = a.getAnswer();
         
@@ -491,13 +494,13 @@ public class Question extends javax.swing.JFrame {
     }
 
     private void Viruses() {
-        AllQuestion n = new AllQuestion();
-        n.qViruses(n);
+        QuestionViruse n = new QuestionViruse();
+        n.qViruses();
         
         ArrayList<AllQuestion> list = n.getQuestionViruses();
         
-        AllQuestion a = new AllQuestion();
-        a.answerViruses(a);
+        QuestionViruse a = new QuestionViruse();
+        a.answerViruses();
         
         ArrayList<AllQuestion> result = a.getAnswerViruses();
         
